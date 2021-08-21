@@ -1,28 +1,12 @@
 import React from 'react';
 import HamburgerSvg from './icon-hamburger.svg'
 
-class Hamburger extends React.Component{
-    constructor(props){
-        super(props);
-        this.state = {
-            clicked: false
-        }
-
-        this.handleClick = this.handleClick.bind(this);
-    }
-
-    handleClick(){
-        console.log("heyyyy");
-    }
-
-    render(){
+function Hamburger(props){
         return (
-            <button onClick={this.handleClick} className="mt-6">
+            <button onClick={props.onClick} className="mt-6 ml-auto mr-8">
                 <img src={HamburgerSvg} />
             </button>
         )
-    }
-
 }
 
 
